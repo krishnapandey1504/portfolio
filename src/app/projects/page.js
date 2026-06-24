@@ -67,6 +67,7 @@ export default function ProjectsPage() {
       </section>
 
     </main>
+    <Footer/>
     </>
   );
 }
