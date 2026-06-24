@@ -1,36 +1,99 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Krishna Pandey Portfolio
 
-## Getting Started
+Personal developer portfolio built with Next.js, showcasing projects, open-source contributions, skills, and my development journey.
 
-First, run the development server:
+## Live Website
+
+https://krishnapandey.vercel.app
+
+## Features
+
+* Modern responsive UI
+* Project showcase
+* Open Source contributions
+* Skills & tech stack
+* About page
+* Contact page
+* Custom 404 page
+* Deployed on Vercel
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* React
+* JavaScript
+* CSS Modules
+
+### Backend (Planned)
+
+* Node.js
+* Express.js
+* MongoDB
+
+### Tools
+
+* Git
+* GitHub
+* Vercel
+
+## Featured Projects
+
+### VeriFy
+
+AI-powered fact-checking and news credibility analysis platform.
+
+### Developer Portfolio
+
+Personal portfolio featuring projects, skills, and open-source contributions.
+
+## Open Source
+
+Contributed to:
+
+* homelab-monitor
+
+Implemented a unified toast notification system and improved user feedback handling.
+
+## Local Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/krishnapandey1504/portfolio.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Future Improvements
 
-## Learn More
+* Working contact form
+* GitHub API integration
+* Dynamic project management
+* Blog section
+* Analytics dashboard
 
-To learn more about Next.js, take a look at the following resources:
+## Author
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Krishna Pandey
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+GitHub: https://github.com/krishnapandey1504
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Portfolio: https://krishnapandey.vercel.app
