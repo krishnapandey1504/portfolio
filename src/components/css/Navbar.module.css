@@ -1,0 +1,292 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 1rem 2rem;
+
+    background: var(--bg);
+    border-bottom: 1px solid #2D2D35;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    backdrop-filter: blur(12px);
+    background: rgba(16, 16, 18, .85);
+}
+
+/* LOGO */
+
+.logo {
+    text-decoration: none;
+    color: var(--primary-light);
+    font-family: var(--font-body);
+    font-size: 1.75rem;
+    font-weight: 900;
+
+    transition: opacity .3s ease;
+}
+
+.logo:hover {
+    opacity: .85;
+}
+
+/* DESKTOP NAV */
+
+.desktopNav {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+
+    text-decoration: none;
+    color: var(--text-muted);
+
+    font-family: var(--font-mono);
+    font-size: .9rem;
+
+    transition: color .3s ease;
+}
+
+.link:hover {
+    color: var(--primary-light);
+}
+
+.active {
+    color: var(--primary-light);
+    border-bottom: 1px solid var(--primary-light);
+    padding-bottom: .35rem;
+}
+
+/* DESKTOP RESUME */
+
+.resume {
+    text-decoration: none;
+
+    color: var(--primary-light);
+
+    font-family: var(--font-mono);
+    font-size: .8rem;
+    letter-spacing: .1rem;
+
+    padding: .8rem 1.2rem;
+
+    border: 1px solid var(--primary-light);
+
+    transition:
+        background .3s ease,
+        border-color .3s ease,
+        color .3s ease;
+}
+
+.resume:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* MOBILE BUTTON */
+
+.menuBtn {
+    display: none;
+
+    border: none;
+    background: none;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+/* OVERLAY */
+
+.overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .55);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity .3s ease,
+        visibility .3s ease;
+
+    z-index: 998;
+}
+
+.overlayOpen {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* MOBILE MENU */
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: linear-gradient(180deg,
+            #181821 0%,
+            #111118 100%);
+
+    border-right: 1px solid #2D2D35;
+
+    transform: translateX(-100%);
+
+    transition:
+        transform .45s cubic-bezier(.16, 1, .3, 1);
+
+    z-index: 2000;
+}
+
+.mobileMenuOpen {
+    transform: translateX(0);
+}
+
+/* MOBILE HEADER */
+
+.mobileHeader {
+    display: flex;
+    justify-content: flex-end;
+
+    padding: 1rem;
+}
+
+.closeBtn {
+    border: none;
+    background: none;
+
+    color: var(--text);
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+/* MOBILE LINKS */
+
+.mobileLinks {
+    display: flex;
+    flex-direction: column;
+
+    gap: .35rem;
+
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.mobileLink {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+
+    height: 52px;
+
+    padding: 0 1rem;
+
+    text-decoration: none;
+
+    color: var(--text-muted);
+
+    font-family: var(--font-mono);
+    font-size: .95rem;
+
+    border-radius: 10px;
+
+    transition:
+        background .25s ease,
+        color .25s ease;
+}
+
+.mobileLink:hover {
+    background: rgba(255, 255, 255, .05);
+    color: var(--text);
+}
+
+.mobileActive {
+    background: rgba(255, 255, 255, .08);
+
+    border-left: 3px solid var(--primary);
+
+    color: var(--text);
+}
+
+.mobileLink svg {
+    flex-shrink: 0;
+}
+
+/* MOBILE RESUME */
+
+.mobileResume {
+    margin-top: auto;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 1.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+
+    color: var(--primary-light);
+
+    font-family: var(--font-mono);
+    font-size: .8rem;
+    letter-spacing: .15rem;
+
+    padding: .8rem 1.2rem;
+
+    border: 1px solid var(--primary-light);
+
+    transition:
+        background .3s ease,
+        color .3s ease,
+        border-color .3s ease;
+}
+
+.mobileResume:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--primary-light);
+}
+
+/* RESPONSIVE */
+
+@media (max-width:900px) {
+
+    .desktopNav,
+    .resume {
+        display: none;
+    }
+
+    .menuBtn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+}

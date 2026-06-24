@@ -1,0 +1,284 @@
+.projectsPage{
+  background:var(--bg);
+  color:var(--text);
+  min-height:100vh;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  padding:80px 48px 40px;
+}
+
+.eyebrow{
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  margin-bottom:28px;
+}
+
+.eyebrow span{
+  width:34px;
+  height:2px;
+
+  background:var(--primary-light);
+}
+
+.eyebrow p{
+  font-family:var(--font-mono);
+  font-size:.75rem;
+  letter-spacing:.2em;
+
+  color:var(--primary-light);
+}
+
+.hero h1{
+  font-size:clamp(4rem,8vw,7rem);
+  line-height:.9;
+  font-weight:900;
+  letter-spacing:-.06em;
+}
+
+.hero p{
+  max-width:720px;
+
+  margin-top:24px;
+
+  color:var(--text-muted);
+
+  font-size:1.05rem;
+  line-height:1.9;
+}
+
+/* =========================
+   CONTROLS
+========================= */
+
+.controls{
+  padding:0 48px 48px;
+}
+
+.filters{
+  display:flex;
+  flex-wrap:wrap;
+  gap:0;
+
+  border:1px solid var(--border);
+
+  background:var(--surface);
+}
+
+.filters button{
+  padding:16px 28px;
+
+  background:none;
+  border:none;
+  border-right:1px solid var(--border);
+
+  color:var(--text);
+
+  font-family:var(--font-mono);
+  font-size:.75rem;
+  letter-spacing:.15em;
+
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.filters button:hover{
+  background:rgba(166,170,255,.08);
+}
+
+.active{
+  background:var(--primary-light) !important;
+  color:#000 !important;
+}
+
+.search{
+  margin-top:12px;
+
+  border:1px solid var(--border);
+
+  background:var(--surface);
+}
+
+.search input{
+  width:100%;
+
+  padding:16px 20px;
+
+  background:transparent;
+  border:none;
+  outline:none;
+
+  color:var(--text);
+
+  font-family:var(--font-mono);
+  font-size:.8rem;
+  letter-spacing:.08em;
+}
+
+.search input::placeholder{
+  color:var(--text-muted);
+}
+
+/* =========================
+   FEATURED
+========================= */
+
+.featured{
+  padding:0 48px 64px;
+}
+
+/* makes ProjectCard look like screenshot */
+
+.featured :global(article){
+  cursor:pointer;
+  transition:.35s ease;
+}
+
+.featured :global(article:hover){
+  transform:translateY(-6px);
+}
+
+/* =========================
+   MATRIX GRID
+========================= */
+
+.matrix{
+  padding:0 48px 100px;
+}
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.projectsPage{
+  background:
+    linear-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+    var(--bg);
+
+  background-size:40px 40px;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1024px){
+
+  .hero{
+    padding:64px 32px 32px;
+  }
+
+  .controls{
+    padding:0 32px 40px;
+  }
+
+  .featured{
+    padding:0 32px 56px;
+  }
+
+  .matrix{
+    padding:0 32px 80px;
+  }
+
+  .hero h1{
+    font-size:5rem;
+  }
+
+  .filters{
+    flex-direction:column;
+  }
+
+  .filters button{
+    width:100%;
+    text-align:left;
+
+    border-right:none;
+    border-bottom:1px solid var(--border);
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+  .hero{
+    padding:56px 24px 28px;
+  }
+
+  .controls{
+    padding:0 24px 32px;
+  }
+
+  .featured{
+    padding:0 24px 48px;
+  }
+
+  .matrix{
+    padding:0 24px 70px;
+  }
+
+  .hero h1{
+    font-size:4rem;
+  }
+
+  .hero p{
+    font-size:1rem;
+    line-height:1.8;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+  .hero{
+    padding:48px 18px 24px;
+  }
+
+  .controls{
+    padding:0 18px 28px;
+  }
+
+  .featured{
+    padding:0 18px 40px;
+  }
+
+  .matrix{
+    padding:0 18px 60px;
+  }
+
+  .hero h1{
+    font-size:3.4rem;
+  }
+
+  .eyebrow{
+    margin-bottom:20px;
+  }
+
+  .filters button{
+    padding:14px 18px;
+    font-size:.72rem;
+  }
+
+  .search input{
+    padding:14px 16px;
+  }
+}

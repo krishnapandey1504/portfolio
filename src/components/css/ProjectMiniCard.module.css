@@ -1,0 +1,165 @@
+.container{
+    background: #16161A;
+    border: 1px solid #2D2D35;
+    font-family: var(--font-body);
+    color: var(--text);
+
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        border-color .3s ease,
+        transform .3s ease;
+}
+
+.container:hover{
+    border-color: var(--primary-light);
+    transform: translateY(-4px);
+}
+
+.label{
+    font-family: var(--font-mono);
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    padding: .75rem 1rem;
+
+    border: 1px solid #2D2D35;
+    border-top: none;
+    border-right: none;
+
+    font-size: .75rem;
+    color: var(--text-muted);
+
+    transition: all .3s ease;
+}
+
+.container:hover .label{
+    color: var(--primary-light);
+    border-color: var(--primary-light);
+}
+
+.image{
+    width: fit-content;
+    height: fit-content;
+
+    margin-top: 1rem;
+    padding: .75rem;
+
+    border: 1px solid #2D2D35;
+
+    transition: all .3s ease;
+}
+
+.container:hover .image{
+    border-color: var(--primary-light);
+}
+
+.title h3{
+    margin: 1rem 0 .75rem;
+
+    font-size: clamp(1.4rem, 2vw, 2rem);
+    font-weight: 700;
+    line-height: 1.2;
+
+    transition: color .3s ease;
+}
+
+.container:hover .title h3{
+    color: var(--primary-light);
+}
+
+.desc{
+    color: var(--text-muted);
+
+    max-width: 60ch;
+    width: 100%;
+
+    line-height: 1.6;
+}
+
+.divider{
+    height: 1px;
+    background: #2D2D35;
+
+    margin: 1.5rem 0 1rem;
+
+    transition: background .3s ease;
+}
+
+.container:hover .divider{
+    background: var(--primary-light);
+    opacity: .4;
+}
+
+.tech{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1.25rem;
+
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+
+    font-family: var(--font-mono);
+    font-size: .875rem;
+
+    color: var(--text-muted);
+}
+
+.tech span{
+    transition: color .3s ease;
+}
+
+.container:hover .tech span{
+    color: var(--text);
+}
+
+/* Tablet */
+
+@media (max-width: 1024px){
+
+    .container{
+        padding: 1.25rem;
+    }
+
+    .desc{
+        max-width: 100%;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    .container{
+        padding: 1rem;
+    }
+
+    .label{
+        font-size: .65rem;
+        padding: .5rem .75rem;
+    }
+
+    .image{
+        margin-top: 1.5rem;
+    }
+
+    .title h3{
+        font-size: 1.5rem;
+    }
+
+    .desc{
+        width: 100%;
+        max-width: 100%;
+        font-size: .95rem;
+    }
+
+    .tech{
+        gap: .75rem;
+        font-size: .75rem;
+    }
+}
